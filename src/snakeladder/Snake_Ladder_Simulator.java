@@ -13,7 +13,7 @@ public class Snake_Ladder_Simulator {
 			int option = rand.nextInt(3);
 			//check condition in switch
 			if(position == WINNING_POSITION) {
-				System.out.println("YOU WON THE GAME====>");
+				System.out.println("<====YOU WON THE GAME====>");
 			
 			break;
 			}
