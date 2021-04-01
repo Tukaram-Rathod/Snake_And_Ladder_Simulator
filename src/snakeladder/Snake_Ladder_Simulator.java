@@ -2,12 +2,21 @@ package snakeladder;
 import java.util.Random;
 public class Snake_Ladder_Simulator {
 
+	static int player1;
+	static int player2;
 	public static void main(String[] args) {
+			System.out.println("player1:");
+			Player();
+			System.out.println("player2:");
+			Player();
+		}
+
+	static void Player() {
+		
 		int position = 0;
 		int DiceRollCount = 0;
 		final int WINNING_POSITION = 100;
 		System.out.println("Initial Position ==>" +position);
-		//using while loop
 		while(position <= WINNING_POSITION) {	
 			Random rand = new Random();
 			int diceValue = rand.nextInt(6)+1;
@@ -48,7 +57,8 @@ public class Snake_Ladder_Simulator {
 					System.out.println("NOT CORRECT");
 			}
 			System.out.println("Dice Roll Count ===>"+DiceRollCount);
-
+	
 		}
+	
 	}
 }
