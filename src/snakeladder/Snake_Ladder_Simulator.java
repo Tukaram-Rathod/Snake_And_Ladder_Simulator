@@ -11,32 +11,25 @@ public class Snake_Ladder_Simulator {
 			int diceValue = rand.nextInt(6)+1;
 			System.out.println("Dice Value is ==> " +diceValue);
 			int option = rand.nextInt(3);
-			//check condition in switch
-			switch(option) {
-				case 0:
-					System.out.println("NO PLAY");
-					break;
-				case 1:
-					System.out.println("LADDER");
-					position += diceValue;
-					System.out.println("Current Position is ==>" + position);
-					break;
-				case 2:
-					if(position < 0) { 
-						position = 0;
-					System.out.println("Current Position is ==>" + position);	
-					}
-					else { 
-						System.out.println("SNAKE");
-						position -= diceValue;
-						System.out.println("Current Position is ==>" + position);
-					}	
-					break;
-				default:
-					System.out.println("NOT CORRECT");
+			
+			if(option == 0) {
+				System.out.println("#NO PLAY");
 			}
-
-
+			else if(option == 1) {
+				System.out.println("#LADDER");
+				position += diceValue;
+				System.out.println("Current Position is ==>" + position);
+			}
+			else if(option == 2) {
+				System.out.println("#SNAKE");
+				position -= diceValue;
+				System.out.println("Current Position is ==>" + position);	
+				
+				if(position < 0) {
+						position = 0;
+						System.out.println("Current Position is ==>" + position);	
+					}
+			}
 		}
 	}
 }
